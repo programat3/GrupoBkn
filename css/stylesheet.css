@@ -1,7 +1,28 @@
-.placeholder{
-    width: 40%;
-    margin: 5% 10%;
+.disponible{
+    color: green;
+}
+.oferta{
+    color: blue;
+}
+.agotado{
+    color: red;
+}
+.grey{
+    background-color: gray;
+}
+.borde{
+    color: red;
+    border-width: 5px;
+    border-color: red;
+    border-style: solid;
 }
 a {
     text-decoration: none;
+}
+p{
+    align-self: center;
+}
+
+.mitad{
+    height: 70%;
 }
