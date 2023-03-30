@@ -130,3 +130,12 @@ p{
     width: 250px;
     margin-bottom: 20px;
 }
+
+#row_progress_bar {
+    --bs-gutter-x: 0rem;
+}
+
+#img_prod {
+    width: 200px;
+    margin-bottom: 20px;
+}
