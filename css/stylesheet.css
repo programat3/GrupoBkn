@@ -30,3 +30,20 @@ p{
 .chico{
     padding: 0px 20%;
 }
+
+#usuarios {
+    padding: 30px;
+}
+
+#subs {
+    max-width:fit-content;
+}
+
+#contraLabel {
+    margin-right: 20px;
+}
+
+#fotoPerfil {
+    width: 250px;
+    margin-bottom: 20px;
+}
