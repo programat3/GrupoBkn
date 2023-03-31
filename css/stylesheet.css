@@ -11,6 +11,7 @@
     background-color: gray;
 }
 .borde{
+    height: 25%;
     color: red;
     border-width: 5px;
     border-color: red;
