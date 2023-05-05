@@ -1,5 +1,29 @@
+//API ropa
+fetch('https://fakestoreapi.com/products')
+    .then(response => response.json())
+    .then(products => {
+        const cardsContainer = document.getElementById('cards-ropa');
+
+        products.forEach(product => {
+            const card = document.createElement('div');
+            card.classList.add('card');
+            card.setAttribute('id', 'cardRopa');
+
+            const img = document.createElement('img');
+            img.src = product.image;
+            img.alt = product.title;
+            card.appendChild(img);
+
+            const title = document.createElement('h4');
+            title.textContent = product.title;
+            card.appendChild(title);
+
+            const price = document.createElement('p');
+            price.textContent = `$${product.price.toFixed(2)}`;
+            card.appendChild(price);
+
 //Validador formulario de registro
-$(document).ready(function () {
+    $(document).ready(function () {
 
     // Agregar método de validación para RUT chileno
     $.validator.addMethod("rutChileno", function (value, element) {
@@ -34,8 +58,7 @@ $(document).ready(function () {
 
         // Validar que el dígito verificador sea correcto
         return dv === lastChar;
-    }, "Por favor ingrese un RUT válido."); 
-
+    }, "Por favor ingrese un RUT válido.");
 
     $("#formregistro").validate({
         rules: {
@@ -93,4 +116,4 @@ $(document).ready(function () {
             },
         },
     });
-});
+    });            
