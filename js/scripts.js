@@ -21,6 +21,10 @@ fetch('https://fakestoreapi.com/products')
             const price = document.createElement('p');
             price.textContent = `$${product.price.toFixed(2)}`;
             card.appendChild(price);
+        });
+    });
+
+
 
 //Validador formulario de registro
     $(document).ready(function () {
@@ -116,4 +120,4 @@ fetch('https://fakestoreapi.com/products')
             },
         },
     });
-    });            
+});       
