@@ -40,9 +40,9 @@ fetch('https://fakestoreapi.com/products')
 
 
 //Validador formulario de registro
-    $(document).ready(function () {
+$(document).ready(function () {
 
-    // Agregar método de validación para RUT chileno
+    //Validación para RUT chileno
     $.validator.addMethod("rutChileno", function (value, element) {
         // Eliminar puntos y guión del RUT
         value = value.replace(/[.-]/g, "");
@@ -133,4 +133,46 @@ fetch('https://fakestoreapi.com/products')
             },
         },
     });
-});       
+});    
+
+// Validador formulario productos
+
+$(document).ready(function(){
+
+    $("#formproducto").validate({
+        rules: {
+            id_producto: {
+                required: true,
+            },
+            inputGroupSelect01: {
+                required: true,
+            },
+            nombre: {
+                required: true,
+            },
+            descripcion: {
+                required: true,
+            },
+            precio: {
+                required: true,
+            },
+        },
+        messages: {
+            id_producto: {
+                required: "El ID del producto es obligatorio"
+            },
+            inputGroupSelect01: {
+                required: "La categoría del producto es obligatoria"
+            },
+            nombre: {
+                required: "El nombre del producto es obligatorio"
+            },
+            descripcion: {
+                required: "La descripción del producto es obligatoria"
+            },
+            precio: {
+                required: "El precio del producto es obligatorio"
+            },
+        },
+    });
+});
