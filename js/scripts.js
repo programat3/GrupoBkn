@@ -38,6 +38,65 @@ fetch('https://fakestoreapi.com/products')
         console.error('Error al obtener los datos de la API', error);
     });
 
+$(document).ready(function () {
+    $("#formmisdatos").validate({
+        rules: {
+            rut: {
+                required: true,
+                rutChileno: true,
+            },
+            nombres: {
+                required: true,
+            },
+            apellidos: {
+                required: true,
+            },
+            email: {
+                required: true,
+                email: true,
+            },
+            direccion: {
+                required: true,
+            },
+            contrasena: {
+                required: true,
+                minlength: 8,
+            },
+            confcontrasena: {
+                required: true,
+                equalTo: "#contrasena",
+            },
+        },
+        messages: {
+            rut: {
+                required: "El RUT es un campo obligatorio",
+                rutChileno: "El formato del rut no es válido",
+            },
+            nombres: {
+                required: "Su nombre es un campo obligatorio",
+            },
+            apellidos: {
+                required: "Su apellido es un campo obligatorio",
+            },
+            email: {
+                required: "El correo es un campo obligatorio",
+                email: "El correo no cumple con el formato",
+            },
+            direccion: {
+                required: "La dirección es un campo obligatorio"
+            },
+            contrasena: {
+                required: "La contraseña es una campo obligatorio",
+                minlength: "Mínimo 8 caracteres",
+            },
+            confcontrasena: {
+                required: "Repita la contraseña anterior",
+                equalTo: "Debe ser igual a la contraseña anterior",
+            },
+        },
+    });
+});    
+
 
 //Validador formulario de registro
 $(document).ready(function () {
