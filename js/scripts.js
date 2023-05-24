@@ -234,4 +234,26 @@ $(document).ready(function(){
             },
         },
     });
+    $(document).ready(function(){
+
+    $("#form-ingresar").validate({
+        rules: {
+            exampleInputEmail1: {
+                required: true,
+                emai: true,
+            },
+            exampleInputPassword1:{
+                required: true,
+            },
+        },
+        messages: {
+            exampleInputEmail1: {
+                required: "El correo es obligatorio",
+                email: "Ingrese un correo válido",
+            },
+            exampleInputPassword1: {
+                required: "La contraseña es obligatoria"
+            },
+        },
+    });
 });
