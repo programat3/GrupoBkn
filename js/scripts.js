@@ -1,4 +1,5 @@
 //API ropa
+$(document).ready(function () {
 fetch('https://fakestoreapi.com/products')
     .then(response => response.json())
     .then(products => {
@@ -33,10 +34,11 @@ fetch('https://fakestoreapi.com/products')
         card.appendChild(button);
         cardsContainer.appendChild(card);
         });
-    })
-    .catch(error => {
-        console.error('Error al obtener los datos de la API', error);
     });
+})
+.catch(error => {
+    console.error('Error al obtener los datos de la API', error);
+});
 
 $(document).ready(function () {
     $("#formmisdatos").validate({
@@ -234,6 +236,7 @@ $(document).ready(function(){
             },
         },
     });
+});
     $(document).ready(function(){
 
     $("#form-ingresar").validate({
