@@ -217,6 +217,14 @@ $(document).ready(function(){
             precio: {
                 required: true,
             },
+            desc_suscripcion: {
+                required: true,
+                greaterThan: 0,
+            },
+            desc_oferta: {
+                required: true,
+                greaterThan: 0,
+            }
         },
         messages: {
             id_producto: {
@@ -234,9 +242,16 @@ $(document).ready(function(){
             precio: {
                 required: "El precio del producto es obligatorio"
             },
+            desc_suscripcion: {
+                required: "Este es un campo obligatorio"
+            },
+            desc_oferta: {
+                required: "Este es un campo obligatorio"
+            },
         },
     });
 });
+
     $(document).ready(function(){
 
     $("#form-ingresar").validate({
