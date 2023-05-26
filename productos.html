@@ -37,11 +37,14 @@
                     
                     <div class="input-group mb-3">
                         <label class="input-group-text" for="inputGroupSelect01">Categoría</label>
-                        <select class="form-select" id="inputGroupSelect01" required>
-                            <option selected>Elige...</option>
-                            <option value="1">Perro</option>
-                            <option value="2">Gato</option>
+                        <select class="form-select" id="categoria" name="categoria" required data-error="#error1">
+                            <option value="" selected>Elige...</option>
+                            <option value="1" required>Perro</option>
+                            <option value="2" required>Gato</option>
                         </select>
+                        <div class="errorTxt">
+                            <span id="error1"></span>
+                        </div>
                     </div>
                     
                     <div class="mb-3">
@@ -121,7 +124,7 @@
                         <tr>
                             <th scope="row"></th>
                             <td>27</td>
-                            <td>Gati</td>
+                            <td>Gato</td>
                             <td>Saco alimento Don Cuchito</td>
                             <td>Saco Cuchito Canin de 1 kilos</td>
                             <td>$2000</td>

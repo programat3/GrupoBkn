@@ -205,7 +205,7 @@ $(document).ready(function(){
             id_producto: {
                 required: true,
             },
-            inputGroupSelect01: {
+            categoria: {
                 required: true,
             },
             nombre: {
@@ -230,7 +230,7 @@ $(document).ready(function(){
             id_producto: {
                 required: "El ID del producto es obligatorio"
             },
-            inputGroupSelect01: {
+            categoria: {
                 required: "La categoría del producto es obligatoria"
             },
             nombre: {
@@ -248,6 +248,14 @@ $(document).ready(function(){
             desc_oferta: {
                 required: "Este es un campo obligatorio"
             },
+        },
+        errorPlacement: function (error, element) {
+            var placement = $(element).data('error');
+            if (placement) {
+                $(placement).append(error)
+            } else {
+                error.insertAfter(element);
+            }
         },
     });
 });
@@ -384,4 +392,42 @@ $(document).ready(function () {
             }
         }
     });
-});    
+});  
+
+// Validador formulario bodega
+
+$(document).ready(function () {
+
+    $("#formbodega").validate({
+        rules: {
+            categoria: {
+                required: true,
+            },
+            producto: {
+                required: true,
+            },
+            cantidad: {
+                required: true,
+            },
+        },
+        messages: {
+            categoria: {
+                required: "La categoría del producto es obligatoria",
+            },
+            producto: {
+                required: "Este campo es obligatorio",
+            },
+            cantidad: {
+                required: "Este campo es obligatorio",
+            },
+        },
+        errorPlacement: function (error, element) {
+            var placement = $(element).data('error');
+            if (placement) {
+                $(placement).append(error)
+            } else {
+                error.insertAfter(element);
+            }
+        }
+    });
+});
