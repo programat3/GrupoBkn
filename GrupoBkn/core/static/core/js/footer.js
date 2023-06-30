@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $.ajax({
-      url: "../footer.html",
+      url: "../../../templates/core/footer.html",
       success: function(data) {
         $("footer").html(data);
       }
