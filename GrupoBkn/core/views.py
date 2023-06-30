@@ -13,7 +13,7 @@ def producto_tienda(request):
 def producto_ficha(request, id):
     producto = Producto.objects.get(idProducto = id)
     data = {"producto": producto}
-    return render(request, "core/vehiculo_ficha.html", data)
+    return render(request, "core/producto_ficha.html", data)
 
 def producto(request, action, id):
     data = {"mesg": "", "form": ProductoForm, "action": action, "id":id}
