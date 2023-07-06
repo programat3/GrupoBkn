@@ -1,0 +1,22 @@
+python -m pip install --upgrade pip
+pip install --upgrade virtualenv
+python -m venv "C:\ProyectosDjango\GrupoBkn_venv"
+call cd /D "C:\ProyectosDjango"
+call GrupoBkn_venv\Scripts\activate.bat
+python -m pip install --upgrade pip
+pip install django
+pip install cx_oracle
+pip install pillow
+pip install djangorestframework
+pip install transbank-sdk
+call django-admin startproject GrupoBkn
+call cd GrupoBkn
+python manage.py startapp core
+python manage.py startapp apirest
+pip freeze > requirements.txt
+call code "C:\ProyectosDjango\GrupoBkn"
+
+
+
+
+
